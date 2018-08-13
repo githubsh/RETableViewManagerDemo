@@ -4,10 +4,13 @@
 
 RETableViewManagerDemo
 
-RETableViewManager 是一个数据驱动快速搭建TableView的MVC框架，方便我们快速使用TableView进行UI开发。。
+RETableViewManager 是一个数据驱动快速搭建TableView的MVC框架，可以方便我们快速使用TableView，从此告别又长又多的TableView代理方法。
 
 RETableViewManager OC版
 [https://github.com/romaonthego/RETableViewManager](https://github.com/romaonthego/RETableViewManager) 
+
+Clone@GitHub
+[https://github.com/githubsh/RETableViewManagerDemo](https://github.com/githubsh/RETableViewManagerDemo) 
 
 (由于作者好久没有更新了，项目比较老了，这里建议大家使用我们这个项目中更新过的源码，持续更新优化中..)
 
@@ -33,22 +36,18 @@ RETableViewManager OC版
 ```
 #### 使用方法
 
-1. 注册Item和Cell
-
 ```
+//1. 注册Item和Cell
 self.formManager[@"TestTableViewItem"] = @"TestTableViewCell";
 //  [self registerItemClass:TestTableViewItem.class forCellClass:TestTableViewCell.class];
-```
-2. 创建SectionArray
-```
+
+//2. 创建SectionArray
 NSMutableArray *sectionArray = [NSMutableArray array];
-```
-3. 创建Section
-```
+
+//3. 创建Section
 RETableViewSection *section = [RETableViewSection section];
-```
-4. Section添加Items
-```
+
+//4. Section添加Items
 for (TestModel *model in self.dataArray) {
     TestTableViewItem *item = [[TestTableViewItem alloc] init];
     item.model = model;
@@ -57,16 +56,13 @@ for (TestModel *model in self.dataArray) {
     };
     [section addItem: item];
 }
-```
-5. SectionArray 添加数据
-```
+
+//5. SectionArray 添加数据
 [sectionArray addObject:section];
-```
-6. 刷新FormManager的数据源
-```
+
+//6. 刷新FormManager的数据源
 [self.formManager replaceSectionsWithSectionsFromArray:sectionArray];
-```
-7. 刷新表格
-```
+
+//7. 刷新表格
 [self.formTable reloadData];
 ```
