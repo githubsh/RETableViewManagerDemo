@@ -9,7 +9,7 @@ RETableViewManager 是一个数据驱动快速搭建TableView的MVC框架，方�
 RETableViewManager OC版
 [https://github.com/romaonthego/RETableViewManager](https://github.com/romaonthego/RETableViewManager) 
 
-(由于作者好久没有更新了，项目比较老了，这里建议大姐使用我们这个项目中更新过的源码，持续更新优化中..)
+(由于作者好久没有更新了，项目比较老了，这里建议大家使用我们这个项目中更新过的源码，持续更新优化中..)
 
 #### 兼容性
 项目使用Xcode9.4编译，实测支持iOS8.0及以上
